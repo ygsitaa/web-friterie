@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="nl" data-page="index">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil - Friterie</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="css/style.css" rel="stylesheet">
+  <script src="js/ripple.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="mx-0 min-h-full min-w-full px-0 bg-[#090909FF] text-white box-border">
+  <div class="bg-[url(../public/images/bg-index-friterie.png)] bg-cover bg-no-repeat w-screen h-screen flex flex-row items-center justify-center animate-[appearAnim_0.6s] overflow-hidden">
+    <div class="languages top-0 right-0 mr-2 fixed z-10 flex items-center gap-2">
+      <a href="index_fr.html" class="text-white">Français</a> / <span class="text-primary">Nederlands</span>
+    </div>
+    <div class="scrollable-wrapper flex flex-col overflow-y-auto overflow-x-hidden md:overflow-visible h-screen md:h-auto max-h-screen md:max-h-none items-center">
+      <div class="m-[50px]">
+        <h1 class="text-h1">LOGO</h1>
+      </div>
+      <div class="flex flex-col w-2/5 gap-3 px-4 md:px-0">
+      <h3 class="text-primary text-h2 heading-shimmer">Bonjour et bienvenue au XXXXXXX !</h3>
+      <p class="text-secondary">Nous sommes une friterie familiale basé à Enghien, vous y dégusterez des préparations comme des Bickys, Mitraillettes et Durums ainsi que des plats a emporter.<br />
+        Vous pouvez nous trouver via Google Maps ci-dessous ou a cette adresse : Rue de Sambre 41, 7850 Enghien
+      </p>
+      <div class="flex flex-row">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2527.299809983471!2d4.039446864591249!3d50.695820726773576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3b17f0fd6a4b7%3A0xfd4b397b702778f!2sPicotin!5e0!3m2!1sfr!2sbe!4v1766077646094!5m2!1sfr!2sbe" width="450" height="275" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-auto md:w-[450px] md:h-[275px]"></iframe>
+        <span class="opening-hours flex flex-col w-[300px] justify-center ml-10 gap-2 text-center">
+          <div class="phone flex flex-row items-center justify-center gap-3">
+            <i class="fa-solid fa-phone-volume"></i><span>0123/45.67.89</span>
+          </div>
+
+          <h4 class="pt-2">Heures d'ouverture</h4>
+          <ul class="items-center !pl-0">
+            <li>Lundi : 12 - 20</li>
+            <li>Mardi : 12 - 20</li>
+            <li>Mercredi : 12 - 20</li>
+            <li>Jeudi : 12 - 20</li>
+            <li>Vendredi : 12 - 20</li>
+            <li>Samedi : 12 - 20</li>
+            <li>Dimanche : 12 - 20</li>
+          </ul>
+        </span>
+
+      </div>
+      <div class="buttons mt-3 pb-6 md:pb-0 flex justify-center md:justify-start">
+        <a href="menu_nl.html">
+          <button class="w-1/4 pt-2 pb-2 pl-4 pr-4 bg-black text-primary border-2 border-primary btn-primary">
+            Aller au Menu
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+    // Store current page and language from filename
+    const currentFilename = window.location.pathname.split('/').pop().replace('.html', '');
+    const currentPage = currentFilename.split('_')[0] || 'index';
+    const currentLanguage = currentFilename.split('_')[1] || 'fr';
+    sessionStorage.setItem('currentPage', currentPage);
+    sessionStorage.setItem('currentLanguage', currentLanguage);
+
+    // Check if View Transitions API is supported
+    const supportsViewTransitions = CSS.supports('view-transition-name', 'auto');
+
+    // Detect navigation and set direction
+    document.addEventListener('click', (e) => {
+      const link = e.target.closest('a[href]');
+      if (link && link.href.includes('.html')) {
+        const filename = link.href.split('/').pop().replace('.html', '');
+        const targetPage = filename.split('_')[0] || 'index';
+        const targetLanguage = filename.split('_')[1] || 'fr';
+        const currentPage = sessionStorage.getItem('currentPage') || 'index';
+        const currentLang = sessionStorage.getItem('currentLanguage') || 'fr';
+
+        // Only apply animation if page changes and language stays the same
+        const pageChanged = currentPage !== targetPage;
+        const languageChanged = currentLang !== targetLanguage;
+        const isForward = (currentPage === 'index' && targetPage === 'menu');
+        sessionStorage.setItem('navigationDirection', isForward ? 'forward' : 'back');
+
+        // Apply fallback animations for browsers without View Transitions support
+        // Only animate if page changed and language stayed the same
+        if (!supportsViewTransitions && pageChanged && !languageChanged) {
+          e.preventDefault();
+          if (isForward) {
+            document.body.classList.add('animate-slide-left');
+          } else {
+            document.body.classList.add('animate-slide-right');
+          }
+          setTimeout(() => {
+            window.location.href = link.href;
+          }, 600);
+        }
+      }
+    });
+
+    // Prefetch HTML pages on hover to reduce loading time in Firefox
+document.addEventListener('DOMContentLoaded', () => {
+  const prefetched = new Map();
+
+  function prefetch(url) {
+    if (prefetched.has(url)) return;
+
+    console.log("Fetching:", url);
+
+    fetch(url)
+      .then(res => res.text())
+      .then(html => {
+        prefetched.set(url, html);
+        console.log("Cached:", url, prefetched);
+      });
+
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = url;
+    document.head.appendChild(link);
+  }
+
+  document.querySelectorAll('a[href$=".html"]').forEach(link => {
+    link.addEventListener('pointerenter', () => prefetch(link.href));
+    link.addEventListener('focus', () => prefetch(link.href));
+  });
+});
+  </script>
+</body>
+
+</html>

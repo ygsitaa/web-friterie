@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr" data-page="menu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MENU - Friterie</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Explora&family=Felipa&family=Jim+Nightshade&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="js/ripple.js" defer></script>
+  <link href="css/embla.css" rel="stylesheet">
+  <!-- Embla Carousel CDN -->
+  <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+
+</head>
+
+<body class="m-0 h-full w-full px-0 !bg-[#090909FF] !bg-[url(../public/images/bgtest1.png)] bg-no-repeat bg-cover text-white box-border flex flex-col items-center justify-center animate-[appearAnim_0.6s]">
+  <div class="header w-full h-[10vh] flex items-center justify-center relative pt-0 mt-5 animate-[appearAnim_0.6s]">
+
+    <div class="languages top-0 right-0 mr-2 fixed flex items-center gap-2">
+      <span class="text-primary">FR</span> / <a href="menu_nl.html" class="text-white">NL</a>
+    </div>
+
+    <!-- Accueil button — absolute, centred vertically in the 10vh header -->
+    <div class="btn-home absolute top-1/2 -translate-y-1/2 right-[calc(65%+50px)] md:right-[calc(75%+50px)] lg:right-[calc(80%+50px)] xl:right-[calc(85%+50px)] max-sm:text-sm xl:text-xl">
+      <a href="index_fr.html">
+        <button class="w-auto pt-2 pb-2 pl-4 pr-4 bg-black text-primary border-2 !rounded-xl border-white btn-primary">
+          <i class="fa-solid fa-hand-point-left max-sm:pr-0 pr-8"></i><span class="max-sm:hidden">Accueil</span>
+        </button>
+      </a>
+    </div>
+
+    <!-- Logo — absolute, centred horizontally & vertically in the 10vh header -->
+      <div class="logo-box">
+      <h1 class="!m-0 text-h1">LOGO</h1>
+    </div>
+
+  </div>
+
+  <div class="content w-full flex flex-col flex-1 justify-start items-center xl:pt-10">
+
+    <!-- ============================================================
+         Embla Carousel — Drag Free — Horizontal on all screen sizes
+         Desktop : outer floating prev/next buttons
+         Mobile/Tablet : inline prev/next buttons beside the slide title
+         ============================================================ -->
+    <div class="embla border-2 border-white rounded-xl relative" id="embla-menu" aria-label="Menu de la friterie">
+
+      <div class="w-full flex items-center justify-center pt-3">
+        <h2 class="text-primary birthstone-regular text-h2">MENU</h2>
+      </div>
+      
+
+      <!-- Outer prev button — desktop only -->
+      <!-- <button class="embla__btn embla__btn--prev embla__btn--desktop embla__btn--ctrl xl:!-ml-10" aria-label="Diapositive précédente" type="button">
+        <i class="fa-solid fa-chevron-left embla__btn__icon"></i>
+      </button> -->
+
+      <!-- Viewport -->
+      <div class="embla__viewport" id="embla-viewport">
+        <div class="embla__container" id="embla-container">
+
+          <!-- Slide 1 : Frites & Accompagnements -->
+          <div class="embla__slide" id="slide-frites">
+            <div class="embla__slide__inner">
+              <!-- Title row: inline prev/next buttons on mobile/tablet -->
+              <div class="embla__slide__title-row">
+                <h3 class="embla__slide__title">Frites</h3>
+              </div>
+
+              <hr class="embla__slide__divider">
+              <ul class="embla__slide__items">
+                <li><span>Petite portion</span><span class="price">2,50 €</span></li>
+                <li><span>Grande portion</span><span class="price">3,50 €</span></li>
+                <li><span>Cornet maison</span><span class="price">4,00 €</span></li>
+                <li><span>Frites sauce au choix</span><span class="price">4,50 €</span></li>
+                <li><span>Currywurst + frites</span><span class="price">7,50 €</span></li>
+                <li><span>Petite portion</span><span class="price">2,50 €</span></li>
+                <li><span>Grande portion</span><span class="price">3,50 €</span></li>
+                <li><span>Cornet maison</span><span class="price">4,00 €</span></li>
+                <li><span>Frites sauce au choix</span><span class="price">4,50 €</span></li>
+                <li><span>Currywurst + frites</span><span class="price">7,50 €</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Slide 2 : Bickys -->
+          <div class="embla__slide" id="slide-bickys">
+            <div class="embla__slide__inner">
+              <div class="embla__slide__title-row">
+                <h3 class="embla__slide__title">Bickys</h3>
+              </div>
+
+              <hr class="embla__slide__divider">
+              <ul class="embla__slide__items">
+                <li><span>Bicky simple</span><span class="price">3,50 €</span></li>
+                <li><span>Bicky fromage</span><span class="price">4,00 €</span></li>
+                <li><span>Double Bicky</span><span class="price">5,50 €</span></li>
+                <li><span>Bicky bacon</span><span class="price">5,00 €</span></li>
+                <li><span>Menu Bicky + frites</span><span class="price">7,00 €</span></li>
+                <li><span>Bicky simple</span><span class="price">3,50 €</span></li>
+                <li><span>Bicky fromage</span><span class="price">4,00 €</span></li>
+                <li><span>Double Bicky</span><span class="price">5,50 €</span></li>
+                <li><span>Bicky bacon</span><span class="price">5,00 €</span></li>
+                <li><span>Menu Bicky + frites</span><span class="price">7,00 €</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Slide 3 : Mitraillettes -->
+          <div class="embla__slide" id="slide-mitraillettes">
+            <div class="embla__slide__inner">
+              <div class="embla__slide__title-row">
+                <h3 class="embla__slide__title">Mitraillettes</h3>
+              </div>
+
+              <hr class="embla__slide__divider">
+              <ul class="embla__slide__items">
+                <li><span>Boulette</span><span class="price">6,50 €</span></li>
+                <li><span>Américain</span><span class="price">6,50 €</span></li>
+                <li><span>Poulet grillé</span><span class="price">7,00 €</span></li>
+                <li><span>Fricadelle</span><span class="price">6,00 €</span></li>
+                <li><span>Mitraillette XL</span><span class="price">8,50 €</span></li>
+                <li><span>Boulette</span><span class="price">6,50 €</span></li>
+                <li><span>Américain</span><span class="price">6,50 €</span></li>
+                <li><span>Poulet grillé</span><span class="price">7,00 €</span></li>
+                <li><span>Fricadelle</span><span class="price">6,00 €</span></li>
+                <li><span>Mitraillette XL</span><span class="price">8,50 €</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Slide 4 : Durums -->
+          <div class="embla__slide" id="slide-durums">
+            <div class="embla__slide__inner">
+              <div class="embla__slide__title-row">
+                <h3 class="embla__slide__title">Durums</h3>
+              </div>
+
+              <hr class="embla__slide__divider">
+              <ul class="embla__slide__items">
+                <li><span>Durum poulet</span><span class="price">7,00 €</span></li>
+                <li><span>Durum kefta</span><span class="price">7,50 €</span></li>
+                <li><span>Durum mixte</span><span class="price">8,00 €</span></li>
+                <li><span>Durum végétarien</span><span class="price">6,50 €</span></li>
+                <li><span>Durum XL</span><span class="price">9,50 €</span></li>
+                <li><span>Durum poulet</span><span class="price">7,00 €</span></li>
+                <li><span>Durum kefta</span><span class="price">7,50 €</span></li>
+                <li><span>Durum mixte</span><span class="price">8,00 €</span></li>
+                <li><span>Durum végétarien</span><span class="price">6,50 €</span></li>
+                <li><span>Durum XL</span><span class="price">9,50 €</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Slide 5 : Sauces & Boissons -->
+          <div class="embla__slide" id="slide-sauces">
+            <div class="embla__slide__inner">
+              <div class="embla__slide__title-row">
+                <h3 class="embla__slide__title">Sauces & Boissons</h3>
+              </div>
+
+              <hr class="embla__slide__divider">
+              <ul class="embla__slide__items">
+                <li><span>Sauce en pot</span><span class="price">0,80 €</span></li>
+                <li><span>Sauce en sachet</span><span class="price">0,50 €</span></li>
+                <li><span>Eau 50cl</span><span class="price">1,50 €</span></li>
+                <li><span>Coca / Fanta 33cl</span><span class="price">2,00 €</span></li>
+                <li><span>Café / Thé</span><span class="price">1,50 €</span></li>
+                <li><span>Sauce en pot</span><span class="price">0,80 €</span></li>
+                <li><span>Sauce en sachet</span><span class="price">0,50 €</span></li>
+                <li><span>Eau 50cl</span><span class="price">1,50 €</span></li>
+                <li><span>Coca / Fanta 33cl</span><span class="price">2,00 €</span></li>
+                <li><span>Café / Thé</span><span class="price">1,50 €</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Slide 6 : Frites & Accompagnements -->
+          <div class="embla__slide" id="slide-frites">
+            <div class="embla__slide__inner">
+              <!-- Title row: inline prev/next buttons on mobile/tablet -->
+              <div class="embla__slide__title-row">
+                <h3 class="embla__slide__title">Frites</h3>
+              </div>
+
+              <hr class="embla__slide__divider">
+              <ul class="embla__slide__items">
+                <li><span>Petite portion</span><span class="price">2,50 €</span></li>
+                <li><span>Grande portion</span><span class="price">3,50 €</span></li>
+                <li><span>Cornet maison</span><span class="price">4,00 €</span></li>
+                <li><span>Frites sauce au choix</span><span class="price">4,50 €</span></li>
+                <li><span>Currywurst + frites</span><span class="price">7,50 €</span></li>
+                <li><span>Petite portion</span><span class="price">2,50 €</span></li>
+                <li><span>Grande portion</span><span class="price">3,50 €</span></li>
+                <li><span>Cornet maison</span><span class="price">4,00 €</span></li>
+                <li><span>Frites sauce au choix</span><span class="price">4,50 €</span></li>
+                <li><span>Currywurst + frites</span><span class="price">7,50 €</span></li>
+              </ul>
+            </div>
+          </div>
+
+        </div><!-- /.embla__container -->
+
+        <!-- Slide counter -->
+        <div class="embla__counter-container w-full items-center justify-center flex flex-row gap-5">
+          <button class="embla__btn embla__btn--prev embla__btn--ctrl" aria-label="Diapositive précédente" type="button">
+            <i class="fa-solid fa-chevron-left embla__btn__icon"></i>
+          </button>
+          <div class="embla__counter" id="embla-counter" aria-live="polite">1 / 5</div>
+          <button class="embla__btn embla__btn--next embla__btn--ctrl" aria-label="Diapositive suivante" type="button">
+            <i class="fa-solid fa-chevron-right embla__btn__icon"></i>
+          </button>
+        </div>
+      </div><!-- /.embla__viewport -->
+    </div><!-- /.embla -->
+
+
+  </div>
+
+  <script>
+    // ============================================================
+    // Embla Carousel initialisation – Drag Free – Horizontal always
+    // ============================================================
+    document.addEventListener('DOMContentLoaded', function () {
+      const viewportNode = document.getElementById('embla-viewport');
+      const counter = document.getElementById('embla-counter');
+
+      const emblaApi = EmblaCarousel(viewportNode, {
+        dragFree: true,
+        axis: 'x',
+        align: 'start',          // desktop: left-align, peek at next slide
+        containScroll: false,
+        loop: false,
+        breakpoints: {
+          // tablet & desktop: 2 slides per click, left-aligned
+          '(min-width: 641px)': { slidesToScroll: 2, align: 'center' },
+          // phone: 1 slide per click, centred
+          '(max-width: 640px)': { align: 'center' }
+        }
+      });
+
+      // ---- Slide counter update ----
+      function updateCounter() {
+        const snaps = emblaApi.scrollSnapList();
+        const snapIndex = emblaApi.selectedScrollSnap();
+        counter.textContent = (snapIndex + 1) + ' / ' + snaps.length;
+      }
+
+      // ---- Wire ALL prev/next buttons (outer desktop + inline mobile) ----
+      function updateAllButtons() {
+        const canPrev = emblaApi.canScrollPrev();
+        const canNext = emblaApi.canScrollNext();
+        document.querySelectorAll('.embla__btn--prev.embla__btn--ctrl').forEach(btn => {
+          btn.disabled = !canPrev;
+        });
+        document.querySelectorAll('.embla__btn--next.embla__btn--ctrl').forEach(btn => {
+          btn.disabled = !canNext;
+        });
+      }
+
+      document.querySelectorAll('.embla__btn--prev.embla__btn--ctrl').forEach(btn => {
+        btn.addEventListener('click', () => emblaApi.scrollPrev());
+      });
+      document.querySelectorAll('.embla__btn--next.embla__btn--ctrl').forEach(btn => {
+        btn.addEventListener('click', () => emblaApi.scrollNext());
+      });
+
+      emblaApi.on('select', updateCounter);
+      emblaApi.on('select', updateAllButtons);
+      emblaApi.on('init', updateCounter);
+      emblaApi.on('init', updateAllButtons);
+      emblaApi.on('reInit', updateCounter);
+      emblaApi.on('reInit', updateAllButtons);
+
+      // Trigger initial state
+      updateCounter();
+      updateAllButtons();
+    });
+  </script>
+
+  <script>
+    // Store current page and language from filename
+    const currentFilename = window.location.pathname.split('/').pop().replace('.html', '');
+    const currentPage = currentFilename.split('_')[0] || 'index';
+    const currentLanguage = currentFilename.split('_')[1] || 'fr';
+    sessionStorage.setItem('currentPage', currentPage);
+    sessionStorage.setItem('currentLanguage', currentLanguage);
+
+    // Check if View Transitions API is supported
+    const supportsViewTransitions = CSS.supports('view-transition-name', 'auto');
+
+    // Detect navigation and set direction
+    document.addEventListener('click', (e) => {
+      const link = e.target.closest('a[href]');
+      if (link && link.href.includes('.html')) {
+        const filename = link.href.split('/').pop().replace('.html', '');
+        const targetPage = filename.split('_')[0] || 'index';
+        const targetLanguage = filename.split('_')[1] || 'fr';
+        const currentPage = sessionStorage.getItem('currentPage') || 'index';
+        const currentLang = sessionStorage.getItem('currentLanguage') || 'fr';
+
+        const pageChanged = currentPage !== targetPage;
+        const languageChanged = currentLang !== targetLanguage;
+        const isForward = (currentPage === 'index' && targetPage === 'menu');
+        sessionStorage.setItem('navigationDirection', isForward ? 'forward' : 'back');
+
+        if (!supportsViewTransitions && pageChanged && !languageChanged) {
+          e.preventDefault();
+          if (isForward) {
+            document.body.classList.add('animate-slide-left');
+          } else {
+            document.body.classList.add('animate-slide-right');
+          }
+          setTimeout(() => {
+            window.location.href = link.href;
+          }, 600);
+        }
+      }
+    });
+
+    // Prefetch HTML pages on hover to reduce loading time in Firefox
+    document.addEventListener('DOMContentLoaded', () => {
+      const prefetched = new Map();
+
+      function prefetch(url) {
+        if (prefetched.has(url)) return;
+        fetch(url).then(res => res.text()).then(html => { prefetched.set(url, html); });
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = url;
+        document.head.appendChild(link);
+      }
+
+      document.querySelectorAll('a[href$=".html"]').forEach(link => {
+        link.addEventListener('pointerenter', () => prefetch(link.href));
+        link.addEventListener('focus', () => prefetch(link.href));
+      });
+    });
+  </script>
+</body>
+
+</html>

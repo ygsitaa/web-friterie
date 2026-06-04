@@ -1,0 +1,268 @@
+/* ============================================================
+   Embla Carousel — Drag Free — Horizontal on all screen sizes
+   Desktop (≥1024px)  : outer floating buttons, align start, 1 slide/click, 70% width
+   Tablet (641–1023px): inline buttons, align start, 2 slides/click, 50% width each
+   Phone  (<641px)    : inline buttons, align center, 1 slide/click, 92% width
+   ============================================================ */
+
+/* ---- Outer wrapper ---- */
+.embla {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 5px auto;
+  padding: 50px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(50px);
+  /* room for desktop prev/next buttons */
+}
+
+/* ---- Viewport (overflow mask) ---- */
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* ---- Scroll container (horizontal) ---- */
+.embla__container {
+  display: flex;
+  flex-direction: row;
+  touch-action: pan-y pinch-zoom;
+  gap: 0;
+  /* spacing handled by margin-left on slides */
+}
+
+/* ---- Individual slide ---- */
+.embla__slide {
+  /* 70% width on desktop so next slide peeks — classic drag-free feel */
+  flex: 0 0 calc(70% - 20px);
+  min-width: 0;
+  margin-left: 20px;
+  position: relative;
+}
+
+/* ---- Slide inner card ---- */
+.embla__slide__inner {
+  /* No surrounding border — separation is handled by border-left below */
+  border-radius: 12px;
+  padding: 32px 28px;
+  height: 100%;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  transition: box-shadow 0.25s ease;
+  cursor: grab;
+  user-select: none;
+}
+
+.embla__slide__inner:active {
+  cursor: grabbing;
+}
+
+/* .embla__slide__inner:hover {
+  box-shadow: 0 0 24px rgba(234, 174, 21, 0.12);
+} */
+
+/* ---- Gold separator: left border on every slide except the first ---- */
+/* .embla__slide+.embla__slide .embla__slide__inner {
+  border-left: 2px solid var(--color-primary);
+  padding-left: 26px; */
+  /* compensate so content isn't squeezed against border */
+/* } */
+
+/* Slide category label */
+.embla__slide__label {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  opacity: 0.9;
+}
+
+/* ---- Title row (wraps prev · title · next on mobile/tablet) ---- */
+.embla__slide__title-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Slide title */
+.embla__slide__title {
+  font-family: "Birthstone", cursive;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+/* Slide divider */
+.embla__slide__divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+  border: none;
+  margin: 4px 0;
+}
+
+/* Slide items list */
+.embla__slide__items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.embla__slide__items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(217,122,30,0.09);
+}
+
+.embla__slide__items li:last-child {
+  border-bottom: none;
+}
+
+.embla__slide__items .price {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  margin-left: 12px;
+}
+
+.embla__btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--color-primary);
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.18s cubic-bezier(.2,.9,.2,1);
+  z-index: 10;
+  backdrop-filter: blur(4px);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.embla__btn__icon { display:inline-block; transition: transform .22s cubic-bezier(.2,.9,.2,1); }
+.embla__btn:hover {
+  background: rgba(242,183,5,0.12);
+  box-shadow: 0 12px 30px rgba(242,183,5,0.18);
+  transform: translateY(-4px) scale(1.04);
+}
+.embla__btn:active { transform: translateY(-2px) scale(.98); }
+.embla__btn--prev:hover .embla__btn__icon { transform: translateX(-3px) rotate(-6deg); }
+.embla__btn--next:hover .embla__btn__icon { transform: translateX(3px) rotate(6deg); }
+.embla__btn:focus-visible { outline: none; box-shadow: 0 0 0 6px rgba(242,183,5,0.08); }
+.embla__btn--desktop:active {
+  transform: translateY(-50%) scale(0.92);
+}
+
+.embla__btn--prev.embla__btn--desktop {
+  left: 0;
+}
+
+.embla__btn--next.embla__btn--desktop {
+  right: 0;
+}
+
+/* ---- Inline title-row buttons (mobile/tablet only <1024px) ---- */
+.embla__btn--inline {
+  position: static;
+  display: flex;
+  /* shown by default; hidden via media query below */
+}
+
+/* ---- Slide counter ---- */
+.embla__counter {
+  text-align: center;
+  /* margin-top: 14px; */
+  font-size: 0.8rem;
+  color: rgba(242,183,5,0.6);
+  letter-spacing: 0.05em;
+}
+
+/* ============================================================
+   DESKTOP (≥ 1024px)
+   Show outer floating buttons; hide inline buttons
+   ============================================================ */
+@media (min-width: 1024px) {
+  .embla__btn--desktop {
+    display: flex;
+  }
+
+  .embla__btn--inline {
+    display: none;
+  }
+}
+
+/* ============================================================
+   TABLET (641px – 1023px)
+   2 slides visible side by side, no outer floating buttons
+   ============================================================ */
+@media (min-width: 641px) {
+  .embla {
+    padding: 50px;
+    /* padding-bottom: 20px; */
+  }
+
+  /* Each slide takes exactly half the viewport → 2 visible at once */
+  .embla__slide {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+
+/* ============================================================
+   PHONE (≤ 640px)
+   Single slide near-full-width, no outer floating buttons
+   ============================================================ */
+@media (max-width: 640px) {
+  .embla {
+    padding: 0 12px;
+    padding-bottom: 70px;
+  }
+
+  .embla__slide {
+    flex: 0 0 calc(100% - 44px);
+    /* 12px left padding + 12px right padding + 20px margin-left = 44px */
+  }
+
+  .embla__slide__inner {
+    padding: 18px 16px;
+    min-height: 300px;
+  }
+
+  .embla__slide__title { font-size: 1.6rem; }
+
+  .embla__slide__items li { font-size: 0.95rem; padding: 8px 0; }
+}
+
+@media (min-width: 641px) and (max-width: 1279px) {
+  .embla {
+    flex: 1;
+  }
+}
+
+/* Desktop larger adjustments */
+@media (min-width: 1024px) {
+  .embla__slide__inner { padding: 32px 36px; min-height: 420px; }
+  .embla__slide__title { font-size: 2.5rem; }
+  .embla__slide__items .price { font-size: 1rem; }
+}

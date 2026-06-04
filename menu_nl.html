@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="nl" data-page="menu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MENU - Friterie</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Explora&family=Felipa&family=Jim+Nightshade&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/embla.css" rel="stylesheet">
+  <!-- Embla Carousel CDN -->
+  <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+
+</head>
+
+<body class="mx-0 min-h-full min-w-full px-0 !bg-[#090909FF] text-white box-border flex flex-col">
+  <div class="header w-full h-[10vh] flex items-center justify-center relative pt-0 mt-10 animate-[appearAnim_0.6s]">
+
+    <div class="languages top-0 right-0 mr-2 fixed">
+      <a href="menu_fr.html" class="text-white">Français</a> / <span class="text-[#EAAE15]">Nederlands</span>
+    </div>
+
+    <div class="btn-home absolute right-[calc(85%+50px)] text-xl top-1/2 -translate-y-1/2">
+      <a href="index_nl.html">
+        <button class="w-auto pt-2 pb-2 pl-4 pr-4 bg-black text-[#EAAE15] border-2 !rounded-xl border-[#EAAE15]">
+          <i class="fa-solid fa-hand-point-left pr-8"></i>Accueil
+        </button>
+      </a>
+    </div>
+
+    <div class="logo-box">
+      <h1 class="!m-0">LOGO</h1>
+    </div>
+
+  </div>
+
+  <div class="content w-full flex flex-col flex-1 justify-start items-center">
+    <h2 class="!text-[#EAAE15] birthstone-regular text-9xl !pt-12 !pb-8">Menu</h2>
+
+    <!-- ============================================================
+         Embla Carousel — Drag Free — Horizontal on all screen sizes
+         Desktop : outer floating prev/next buttons
+         Mobile/Tablet : inline prev/next buttons beside the slide title
+         ============================================================ -->
+    <div class="embla" id="embla-menu" aria-label="Menukaart van de frituur">
+
+      <!-- Outer prev button — desktop only -->
+      <button class="embla__btn embla__btn--prev embla__btn--desktop embla__btn--ctrl"
+              aria-label="Vorige slide" type="button">
+        <i class="fa-solid fa-chevron-left embla__btn__icon"></i>
+      </button>
+
+      <!-- Viewport -->
+      <div class="embla__viewport" id="embla-viewport">
+        <div class="embla__container" id="embla-container">
+
+          <!-- Slide 1 : Friet -->
+          <div class="embla__slide" id="slide-friet">
+            <div class="embla__slide__inner">
+              <span class="embla__slide__label">Samen genieten</span>
+              <div class="embla__slide__title-row">
+                <button class="embla__btn embla__btn--prev embla__btn--inline embla__btn--ctrl"
+                        aria-label="Vorige slide" type="button">
+                  <i class="fa-solid fa-chevron-left embla__btn__icon"></i>
+                </button>
+                <h3 class="embla__slide__title">Friet</h3>
+                <button class="embla__btn embla__btn--next embla__btn--inline embla__btn--ctrl"
+                        aria-label="Volgende slide" type="button">
+                  <i class="fa-solid fa-chevron-right embla__btn__icon"></i>
+                </button>
+              </div>
+              <hr class="embla__slide__divider">
+              <ul class="embla__slide__items">
+                <li><span>Klein portie</span><span class="price">2,50 €</span></li>
+                <li><span>Groot portie</span><span class="price">3,50 €</span></li>
+                <li><span>Thuisportie</span><span class="price">4,00 €</span></li>
+                <li><span>Friet met saus</span><span class="price">4,50 €</span></li>
+                <li><span>Currywurst + friet</span><span class="price">7,50 €</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Slide 2 : Bickys -->
+          <div class="embla__slide" id="slide-bickys">
+            <div class="embla__slide__inner">
+              <span class="embla__slide__label">Klassiekers</span>
+              <div class="embla__slide__title-row">
+                <button class="embla__btn embla__btn--prev embla__btn--inline embla__btn--ctrl"
+                        aria-label="Vorige slide" type="button">
+                  <i class="fa-solid fa-chevron-left embla__btn__icon"></i>
+                </button>
+                <h3 class="embla__slide__title">Bickys</h3>
+                <button class="embla__btn embla__btn--next embla__btn--inline embla__btn--ctrl"
+                        aria-label="Volgende slide" type="button">
+                  <i class="fa-solid fa-chevron-right embla__btn__icon"></i>
+                </button>
+              </div>
+              <hr class="embla__slide__divider">
+              <ul class="embla__slide__items">
+                <li><span>Bicky enkel</span><span class="price">3,50 €</span></li>
+                <li><span>Bicky kaas</span><span class="price">4,00 €</span></li>
+                <li><span>Dubbele Bicky</span><span class="price">5,50 €</span></li>
+                <li><span>Bicky bacon</span><span class="price">5,00 €</span></li>
+                <li><span>Menu Bicky + friet</span><span class="price">7,00 €</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Slide 3 : Mitraillettes -->
+          <div class="embla__slide" id="slide-mitraillettes">
+            <div class="embla__slide__inner">
+              <span class="embla__slide__label">Stevig</span>
+              <div class="embla__slide__title-row">
+                <button class="embla__btn embla__btn--prev embla__btn--inline embla__btn--ctrl"
+                        aria-label="Vorige slide" type="button">
+                  <i class="fa-solid fa-chevron-left embla__btn__icon"></i>
+                </button>
+                <h3 class="embla__slide__title">Mitraillettes</h3>
+                <button class="embla__btn embla__btn--next embla__btn--inline embla__btn--ctrl"
+                        aria-label="Volgende slide" type="button">
+                  <i class="fa-solid fa-chevron-right embla__btn__icon"></i>
+                </button>
+              </div>
+              <hr class="embla__slide__divider">
+              <ul class="embla__slide__items">
+                <li><span>Gehaktbal</span><span class="price">6,50 €</span></li>
+                <li><span>Américain</span><span class="price">6,50 €</span></li>
+                <li><span>Gegrilde kip</span><span class="price">7,00 €</span></li>
+                <li><span>Frikadel</span><span class="price">6,00 €</span></li>
+                <li><span>Mitraillette XL</span><span class="price">8,50 €</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Slide 4 : Durums -->
+          <div class="embla__slide" id="slide-durums">
+            <div class="embla__slide__inner">
+              <span class="embla__slide__label">Meenemen</span>
+              <div class="embla__slide__title-row">
+                <button class="embla__btn embla__btn--prev embla__btn--inline embla__btn--ctrl"
+                        aria-label="Vorige slide" type="button">
+                  <i class="fa-solid fa-chevron-left embla__btn__icon"></i>
+                </button>
+                <h3 class="embla__slide__title">Durums</h3>
+                <button class="embla__btn embla__btn--next embla__btn--inline embla__btn--ctrl"
+                        aria-label="Volgende slide" type="button">
+                  <i class="fa-solid fa-chevron-right embla__btn__icon"></i>
+                </button>
+              </div>
+              <hr class="embla__slide__divider">
+              <ul class="embla__slide__items">
+                <li><span>Durum kip</span><span class="price">7,00 €</span></li>
+                <li><span>Durum kefta</span><span class="price">7,50 €</span></li>
+                <li><span>Durum gemengd</span><span class="price">8,00 €</span></li>
+                <li><span>Durum vegetarisch</span><span class="price">6,50 €</span></li>
+                <li><span>Durum XL</span><span class="price">9,50 €</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Slide 5 : Sauzen & Dranken -->
+          <div class="embla__slide" id="slide-sauzen">
+            <div class="embla__slide__inner">
+              <span class="embla__slide__label">Extra's</span>
+              <div class="embla__slide__title-row">
+                <button class="embla__btn embla__btn--prev embla__btn--inline embla__btn--ctrl"
+                        aria-label="Vorige slide" type="button">
+                  <i class="fa-solid fa-chevron-left embla__btn__icon"></i>
+                </button>
+                <h3 class="embla__slide__title">Sauzen & Dranken</h3>
+                <button class="embla__btn embla__btn--next embla__btn--inline embla__btn--ctrl"
+                        aria-label="Volgende slide" type="button">
+                  <i class="fa-solid fa-chevron-right embla__btn__icon"></i>
+                </button>
+              </div>
+              <hr class="embla__slide__divider">
+              <ul class="embla__slide__items">
+                <li><span>Saus in bakje</span><span class="price">0,80 €</span></li>
+                <li><span>Saus in zakje</span><span class="price">0,50 €</span></li>
+                <li><span>Water 50cl</span><span class="price">1,50 €</span></li>
+                <li><span>Cola / Fanta 33cl</span><span class="price">2,00 €</span></li>
+                <li><span>Koffie / Thee</span><span class="price">1,50 €</span></li>
+              </ul>
+            </div>
+          </div>
+
+        </div><!-- /.embla__container -->
+      </div><!-- /.embla__viewport -->
+
+      <!-- Outer next button — desktop only -->
+      <button class="embla__btn embla__btn--next embla__btn--desktop embla__btn--ctrl"
+              aria-label="Volgende slide" type="button">
+        <i class="fa-solid fa-chevron-right embla__btn__icon"></i>
+      </button>
+
+    </div><!-- /.embla -->
+
+    <!-- Slide counter -->
+    <div class="embla__counter" id="embla-counter" aria-live="polite">1 / 5</div>
+
+  </div>
+
+  <script>
+    // ============================================================
+    // Embla Carousel initialisation – Drag Free – Horizontal always
+    // ============================================================
+    document.addEventListener('DOMContentLoaded', function () {
+      const viewportNode = document.getElementById('embla-viewport');
+      const counter      = document.getElementById('embla-counter');
+
+      const emblaApi = EmblaCarousel(viewportNode, {
+        dragFree: true,
+        axis: 'x',
+        align: 'start',          // desktop: left-align, peek at next slide
+        containScroll: 'trimSnaps',
+        loop: false,
+        breakpoints: {
+          // tablet: 2 slides per click, left-aligned
+          '(min-width: 641px) and (max-width: 1023px)': { slidesToScroll: 2, align: 'start' },
+          // phone: 1 slide per click, centred
+          '(max-width: 640px)': { align: 'center' }
+        }
+      });
+
+      // ---- Slide counter update ----
+      function updateCounter() {
+        const snaps     = emblaApi.scrollSnapList();
+        const snapIndex = emblaApi.selectedScrollSnap();
+        counter.textContent = (snapIndex + 1) + ' / ' + snaps.length;
+      }
+
+      // ---- Wire ALL prev/next buttons (outer desktop + inline mobile) ----
+      function updateAllButtons() {
+        const canPrev = emblaApi.canScrollPrev();
+        const canNext = emblaApi.canScrollNext();
+        document.querySelectorAll('.embla__btn--prev.embla__btn--ctrl').forEach(btn => {
+          btn.disabled = !canPrev;
+        });
+        document.querySelectorAll('.embla__btn--next.embla__btn--ctrl').forEach(btn => {
+          btn.disabled = !canNext;
+        });
+      }
+
+      document.querySelectorAll('.embla__btn--prev.embla__btn--ctrl').forEach(btn => {
+        btn.addEventListener('click', () => emblaApi.scrollPrev());
+      });
+      document.querySelectorAll('.embla__btn--next.embla__btn--ctrl').forEach(btn => {
+        btn.addEventListener('click', () => emblaApi.scrollNext());
+      });
+
+      emblaApi.on('select', updateCounter);
+      emblaApi.on('select', updateAllButtons);
+      emblaApi.on('init',   updateCounter);
+      emblaApi.on('init',   updateAllButtons);
+      emblaApi.on('reInit', updateCounter);
+      emblaApi.on('reInit', updateAllButtons);
+
+      // Trigger initial state
+      updateCounter();
+      updateAllButtons();
+    });
+  </script>
+
+  <script>
+    // Store current page and language from filename
+    const currentFilename = window.location.pathname.split('/').pop().replace('.html', '');
+    const currentPage = currentFilename.split('_')[0] || 'index';
+    const currentLanguage = currentFilename.split('_')[1] || 'fr';
+    sessionStorage.setItem('currentPage', currentPage);
+    sessionStorage.setItem('currentLanguage', currentLanguage);
+
+    // Check if View Transitions API is supported
+    const supportsViewTransitions = CSS.supports('view-transition-name', 'auto');
+
+    // Detect navigation and set direction
+    document.addEventListener('click', (e) => {
+      const link = e.target.closest('a[href]');
+      if (link && link.href.includes('.html')) {
+        const filename = link.href.split('/').pop().replace('.html', '');
+        const targetPage = filename.split('_')[0] || 'index';
+        const targetLanguage = filename.split('_')[1] || 'fr';
+        const currentPage = sessionStorage.getItem('currentPage') || 'index';
+        const currentLang = sessionStorage.getItem('currentLanguage') || 'fr';
+
+        const pageChanged = currentPage !== targetPage;
+        const languageChanged = currentLang !== targetLanguage;
+        const isForward = (currentPage === 'index' && targetPage === 'menu');
+        sessionStorage.setItem('navigationDirection', isForward ? 'forward' : 'back');
+
+        if (!supportsViewTransitions && pageChanged && !languageChanged) {
+          e.preventDefault();
+          if (isForward) {
+            document.body.classList.add('animate-slide-left');
+          } else {
+            document.body.classList.add('animate-slide-right');
+          }
+          setTimeout(() => {
+            window.location.href = link.href;
+          }, 600);
+        }
+      }
+    });
+
+    // Prefetch HTML pages on hover to reduce loading time in Firefox
+    document.addEventListener('DOMContentLoaded', () => {
+      const prefetched = new Map();
+
+      function prefetch(url) {
+        if (prefetched.has(url)) return;
+        fetch(url).then(res => res.text()).then(html => { prefetched.set(url, html); });
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = url;
+        document.head.appendChild(link);
+      }
+
+      document.querySelectorAll('a[href$=".html"]').forEach(link => {
+        link.addEventListener('pointerenter', () => prefetch(link.href));
+        link.addEventListener('focus', () => prefetch(link.href));
+      });
+    });
+  </script>
+</body>
+
+</html>
