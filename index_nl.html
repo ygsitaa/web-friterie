@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accueil - Friterie</title>
+  <title>Welkom - Frituur</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -13,53 +13,66 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="mx-0 min-h-full min-w-full px-0 bg-[#090909FF] text-white box-border">
-  <div class="bg-[url(../public/images/bg-index-friterie.png)] bg-cover bg-no-repeat w-screen h-screen flex flex-row items-center justify-center animate-[appearAnim_0.6s] overflow-hidden">
-    <div class="languages top-0 right-0 mr-2 fixed z-10 flex items-center gap-2">
-      <a href="index_fr.html" class="text-white">Français</a> / <span class="text-primary">Nederlands</span>
+<body class="mx-0 w-screen h-screen px-0 !bg-[#090909FF] bg-[url(../public/images/bgmenu-1.png)] bg-cover bg-no-repeat text-white box-border animate-[appearAnim_0.6s]">
+  <div class="w-full h-full flex xl:flex-row flex-col items-center justify-center overflow-hidden">
+    <div class="languages top-1 right-0 mr-2 fixed z-10 flex items-center gap-2 bg-[#101010] p-2 border-2 border-white rounded-xl">
+      <a href="index.html" class="text-white">Frans</span></a> <span class="text-[#B9E0C3]">/</span> <span class="text-primary">Nederlands</span>
     </div>
-    <div class="scrollable-wrapper flex flex-col overflow-y-auto overflow-x-hidden md:overflow-visible h-screen md:h-auto max-h-screen md:max-h-none items-center">
+    <div class="scrollable-wrapper flex flex-col lg:flex-row overflow-y-auto overflow-x-hidden md:overflow-visible h-screen md:h-auto max-h-screen md:max-h-none items-center md:justify-center">
       <div class="m-[50px]">
         <h1 class="text-h1">LOGO</h1>
       </div>
-      <div class="flex flex-col w-2/5 gap-3 px-4 md:px-0">
-      <h3 class="text-primary text-h2 heading-shimmer">Bonjour et bienvenue au XXXXXXX !</h3>
-      <p class="text-secondary">Nous sommes une friterie familiale basé à Enghien, vous y dégusterez des préparations comme des Bickys, Mitraillettes et Durums ainsi que des plats a emporter.<br />
-        Vous pouvez nous trouver via Google Maps ci-dessous ou a cette adresse : Rue de Sambre 41, 7850 Enghien
+      <div class="content-container flex flex-col w-5/6 md:w-4/6 gap-3 md:px-0 border-2 border-white rounded-xl bg-card backdrop-blur-[2px]">
+      <h3 class="text-primary text-h2">Hallo en welkom bij <span class="birthstone-regular heading-shimmer">XXXXXXX</span> !</h3>
+      <p class="text-secondary">Wij zijn een familiale frituur gevestigd in Enghien, waar u kan genieten van bereidingen zoals Bicky's, Mitraillettes en Durums, alsook gerechten om mee te nemen.<br /><br/>
+        Vind ons via Google Maps hieronder of op dit adres : <br/><span class="text-primary">Rue de Sambre 41, 7850 Enghien</span>
       </p>
-      <div class="flex flex-row">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2527.299809983471!2d4.039446864591249!3d50.695820726773576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3b17f0fd6a4b7%3A0xfd4b397b702778f!2sPicotin!5e0!3m2!1sfr!2sbe!4v1766077646094!5m2!1sfr!2sbe" width="450" height="275" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-auto md:w-[450px] md:h-[275px]"></iframe>
-        <span class="opening-hours flex flex-col w-[300px] justify-center ml-10 gap-2 text-center">
-          <div class="phone flex flex-row items-center justify-center gap-3">
-            <i class="fa-solid fa-phone-volume"></i><span>0123/45.67.89</span>
+      <div class="flex flex-col md:flex-row gap-4">
+        <div id="bottom-ctn" class="w-full md:w-[550px] aspect-[16/9]">
+          <button class="map-placeholder" id="loadMap">
+            <img
+              src="public/images/gmap.PNG"
+              alt="Carte de la friterie"
+              loading="lazy"
+            />
+            <span>Kaart bekijken</span>
+          </button>
+        </div>
+        <span class="opening-hours flex flex-col w-full md:w-[300px] justify-center items-center xl:ml-10 gap-2 text-center">
+          <div class="phone flex flex-row items-center justify-center gap-3 mt-2">
+            <i class="fa-solid fa-phone-volume"></i><span class="text-secondary">0123/45.67.89</span>
           </div>
 
-          <h4 class="pt-2">Heures d'ouverture</h4>
-          <ul class="items-center !pl-0">
-            <li>Lundi : 12 - 20</li>
-            <li>Mardi : 12 - 20</li>
-            <li>Mercredi : 12 - 20</li>
-            <li>Jeudi : 12 - 20</li>
-            <li>Vendredi : 12 - 20</li>
-            <li>Samedi : 12 - 20</li>
-            <li>Dimanche : 12 - 20</li>
+          <h5 class="pt-2 !font-semibold text-primary">Openingsuren</h4>
+          <ul class="items-center !pl-0 text-secondary">
+            <li>Maandag : 12 - 20</li>
+            <li>Dinsdag : 12 - 20</li>
+            <li>Woensdag : 12 - 20</li>
+            <li>Donderdag : 12 - 20</li>
+            <li>Vrijdag : 12 - 20</li>
+            <li>Zaterdag : 12 - 20</li>
+            <li>Zondag : 12 - 20</li>
           </ul>
         </span>
 
       </div>
-      <div class="buttons mt-3 pb-6 md:pb-0 flex justify-center md:justify-start">
+      <div class="buttons mt-8 pb-6 md:pb-0 flex justify-center lg:justify-start">
         <a href="menu_nl.html">
-          <button class="w-1/4 pt-2 pb-2 pl-4 pr-4 bg-black text-primary border-2 border-primary btn-primary">
-            Aller au Menu
+          <button class="pt-2 pb-2 pl-4 pr-4 bg-black text-primary border-2 border-primary btn-primary">
+            Naar het Menu
           </button>
         </a>
       </div>
     </div>
   </div>
 
-
-
   <script>
+    document.getElementById("loadMap").addEventListener("click", () => {
+      document.getElementById("bottom-ctn").innerHTML = `
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2527.299809983471!2d4.039446864591249!3d50.695820726773576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3b17f0fd6a4b7%3A0xfd4b397b702778f!2sPicotin!5e0!3m2!1sfr!2sbe!4v1766077646094!5m2!1sfr!2sbe" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-full"></iframe>
+      `;
+    });
+
     // Store current page and language from filename
     const currentFilename = window.location.pathname.split('/').pop().replace('.html', '');
     const currentPage = currentFilename.split('_')[0] || 'index';

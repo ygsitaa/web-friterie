@@ -15,8 +15,8 @@
 
 <body class="mx-0 w-screen h-screen px-0 !bg-[#090909FF] bg-[url(../public/images/bgmenu-1.png)] bg-cover bg-no-repeat text-white box-border animate-[appearAnim_0.6s]">
   <div class="w-full h-full flex xl:flex-row flex-col items-center justify-center overflow-hidden">
-    <div class="languages top-0 right-0 mr-2 fixed z-10 flex items-center gap-2">
-      <span class="text-primary">FR</span> / <a href="index_nl.html" class="text-white">NL</a>
+    <div class="languages top-1 right-0 mr-2 fixed z-10 flex items-center gap-2 bg-[#101010] p-2 border-2 border-white rounded-xl">
+      <span class="text-primary">Français</span> <span class="text-[#B9E0C3]">/</span> <a href="index_nl.html" class="text-white">Néerlandais</a>
     </div>
     <div class="scrollable-wrapper flex flex-col lg:flex-row overflow-y-auto overflow-x-hidden md:overflow-visible h-screen md:h-auto max-h-screen md:max-h-none items-center md:justify-center">
       <div class="m-[50px]">
@@ -40,11 +40,11 @@
         </div>
         <span class="opening-hours flex flex-col w-full md:w-[300px] justify-center items-center xl:ml-10 gap-2 text-center">
           <div class="phone flex flex-row items-center justify-center gap-3 mt-2">
-            <i class="fa-solid fa-phone-volume"></i><span class="text-primary">0123/45.67.89</span>
+            <i class="fa-solid fa-phone-volume"></i><span class="text-secondary">0123/45.67.89</span>
           </div>
 
-          <h5 class="pt-2 !font-semibold">Heures d'ouverture</h4>
-          <ul class="items-center !pl-0 text-primary">
+          <h5 class="pt-2 !font-semibold text-primary">Heures d'ouverture</h4>
+          <ul class="items-center !pl-0 text-secondary">
             <li>Lundi : 12 - 20</li>
             <li>Mardi : 12 - 20</li>
             <li>Mercredi : 12 - 20</li>
@@ -75,6 +75,7 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2527.299809983471!2d4.039446864591249!3d50.695820726773576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3b17f0fd6a4b7%3A0xfd4b397b702778f!2sPicotin!5e0!3m2!1sfr!2sbe!4v1766077646094!5m2!1sfr!2sbe" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-full"></iframe>
       `;
     });
+
     // Store current page and language from filename
     const currentFilename = window.location.pathname.split('/').pop().replace('.html', '');
     const currentPage = currentFilename.split('_')[0] || 'index';
