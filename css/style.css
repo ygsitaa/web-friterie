@@ -166,7 +166,7 @@ body{
   background-image: url(../public/images/bgtest2.png);
   background-size: cover;
   background-position: center;
-  color: var(--color-text);
+  color: white;
 }
 
 /* Card / content container defaults */
